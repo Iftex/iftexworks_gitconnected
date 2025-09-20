@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Assets/Favicon.png" alt="favicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>iftexworks(Early Accessed)</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!--Maintenance-->
+    <div class="maintenance-bar">
+    <div style="display: flex; align-items: center;">
+        <div class="alert-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        <div class="message">
+            <strong>Early Accessed(Preview Only)</strong> Currently working in progress & under maintenance. 
+        </div>
+    </div>
+    <button class="close-btn">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+</div>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="#" class="itlogo">
+                    <img src='Assets/Iftexmain.png' alt="iftexmain">
+                </a>
+                <h2>iftexworks</h2>
+            </div> 
+            
+            <ul>
+                <li><span class="select" onclick="scrollToSection('home')">Home</span></li>
+                <li><span class="select" onclick="scrollToSection('about')">About</span></li>
+                <li><span class="select" onclick="scrollToSection('skills')">Skills</span></li>
+                <li><span class="select" onclick="scrollToSection('faq')">FAQ</span></li>
+                <li><button class="navbut" onclick="scrollToSection('contact')">Contact</button></li>
+            </ul>
+            
+            <div id="menu-icon">
+                <i class="material-icons">menu</i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu">
+        <ul>
+            <li><span class="menu" onclick="scrollToSection('home')">Home</span></li>
+            <li><span class="menu" onclick="scrollToSection('about')">About</span></li>
+            <li><span class="menu" onclick="scrollToSection('skills')">Skills</span></li>
+            <li><span class="menu" onclick="scrollToSection('faq')">FAQ</span></li>
+            <li><button class="navbut" onclick="scrollToSection('faq')">Contact</button></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section class="home" id="home">
+    <div class="home-content" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="300">
+        <h2>Built with code & caffeine</h2>
+        <p>A place where code meets creativity. Let me show you what I've been building.</p>
+    </div>
+
+    <!-- Placeholder for 3D item -->
+    <div class="home-visual" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="400">
+        <div class="cube-placeholder">
+            3D Item<br>(Placeholder)
+        </div>
+    </div>
+   </section>
+
+        <!-- About Section -->
+        <section class="about" id="about" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="250">
+            <img src="Assets/Iftex about svg.svg" alt="aboutme">
+            <div class="about-content">
+                <h2>Designed with logic & latte</h2>
+                <p>I'm Iftekhar a learner from Bangladesh. I make designs, create websites, develop games as well as code
+                    to grow and improve. This site showcases some of my skills and works on front-end-developing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills" data-aos="fade-right" data-aos-easing="ease-out" data-aos-delay="250">
+            <h2>The tools I speak often</h2>
+            <p>I might not be the professional but these are my basic knowledge. Hover for a clear look—</p>
+        
+            <div class="skill-filters">
+
+                <div class="skill-filture" data-category="all">
+                    <img src="Assets/Skillicons/home.svg" alt="filtures" style="width: 31px;">
+                    <span>All</span>
+                </div>
+                <div class="skill-filture" data-category="programming">
+                    <img src="Assets/Skillicons/code.svg" alt="filtures">
+                    <span>Programming Languages</span>
+                </div>
+                <div class="skill-filture" data-category="visualdesign">
+                    <img src="Assets/Skillicons/ruler-vertical.svg" alt="filtures">
+                    <span>Visual Designing</span>
+                </div>
+                <div class="skill-filture" data-category="videoediting">
+                    <img src="Assets/Skillicons/clapperboard.svg" alt="filtures">
+                    <span>Video Editing</span>
+                </div>
+                <div class="skill-filture" data-category="productivity">
+                    <img src="Assets/Skillicons/calendar.svg" alt="filtures">
+                    <span>Productivity</span>
+                </div>
+                <div class="skill-filture" data-category="others">
+                    <img src="Assets/Skillicons/gear.svg" alt="filtures">
+                    <span>Devtools</span>
+                </div>
+            </div>
+        
+            <div class="skilllogos">
+                <img class="skill-icon programming" src="Assets/Skillicons/html5.svg" alt="HTML5">
+                <img class="skill-icon programming" src="Assets/Skillicons/css3.svg" alt="CSS3">
+                <img class="skill-icon programming" src="Assets/Skillicons/tailwindcss.svg" alt="Tailwind CSS">
+                <img class="skill-icon programming" src="Assets/Skillicons/javascript.svg" alt="JavaScript">
+                <img class="skill-icon programming" src="Assets/Skillicons/python.svg" alt="Python">
+                <img class="skill-icon visualdesign" src="Assets/Skillicons/figma.svg" alt="Figma">
+                <img class="skill-icon visualdesign" src="Assets/Skillicons/Canva.svg" alt="Canva">
+                <img class="skill-icon visualdesign" src="Assets/Skillicons/AdobeExpress.svg" alt="Adobe Express">
+                <img class="skill-icon visualdesign" src="Assets/Skillicons/pixlr.svg" alt="Pixlr">
+                <img class="skill-icon videoediting" src="Assets/Skillicons/capcut.svg" alt="CapCut">
+                <img class="skill-icon videoediting" src="Assets/Skillicons/filmora.svg" alt="Filmora">
+                <img class="skill-icon productivity" src="Assets/Skillicons/word.svg" alt="Word">
+                <img class="skill-icon productivity" src="Assets/Skillicons/powerpoint.svg" alt="PowerPoint">
+                <img class="skill-icon productivity" src="Assets/Skillicons/excel.svg" alt="Excel">
+                <img class="skill-icon others" src="Assets/Skillicons/vscode.svg" alt="VS Code">
+                <img class="skill-icon others" src="Assets/Skillicons/Github.svg" alt="GitHub">
+                <img class="skill-icon others" src="Assets/Skillicons/wordpress.svg" alt="WordPress">
+                <img class="skill-icon others" src="Assets/Skillicons/robloxstudio.svg" alt="Roblox Studio">
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="250">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Why did you build this site?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    This site serves as a virtual portal where visitors can know a bit about me. Additionally it's also a platform
+                    to practice web-development and share my progress.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I view the source code of this site?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    I appreciate your interest and curiosity but I haven't made the source code public yet. I have kept it private for now because this
+                    project is really too personal to me and I've put in a lot of time and effort in it. Hope you understand.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Who made this site?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    This website was created and designed by me using html5 css3 and Javascript as well as some different sources. You can find
+                    them at the bottom of the website. Scroll to take a look.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long did it take to make this website?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    That's a thoughtful question. In total, the website took about 8 days to complete. In terms of working hours, 
+                    it adds up to approximately 53-58 hours of focused effort.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What are you working on next?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    Currently, I am learning Front-End Development and my plan is to keep building new projects on it to improve myself.
+                    I am also planning to learn new coding languages and maybe even professional graphics designing.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I hire you for a project?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    I'm not someone so professional just learning and growing day by day. This project was something I created for myself.
+                    I don't take on work for clients or anyone at the moment but if you still have any specific topic or idea you'd like   
+                    to discuss, feel free to reach me out. Join our <a href="https://discord.gg/E8Fy3PHvdr" target="_blank" rel="noopener noreferrer">Experimental Discord Server</a>.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I get you in touch?
+                    <i class="material-icons" id="menu-icon1">keyboard_arrow_up</i>
+                </button>
+                <div class="faq-answer">
+                    As I'm not someone professional I prefer to connect through <a href="http://discordapp.com/users/985784787614699550" target="_blank" rel="noopener noreferrer">Discord</a> 
+                    or other platforms. Feel free to reach out to me via <a href="https://discord.gg/E8Fy3PHvdr" target="_blank" rel="noopener noreferrer">Discord Server</a>. 
+                    I am delighted to chat, exchange ideas or help out with any issue or problem.
+                </div>
+            </div>
+        </section>
+
+        <!--Contact Section-->
+        <section class="contact" id="contact" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="250">
+            <div class="contact-info">
+                <h2>Get in touch</h2>
+                <p>Share your thoughts, ideas, or just say hi. Whether it’s feedback, questions, or something that inspires you — I’d 
+                    love to hear it. Simply use the form beside to reach out.</p>
+                <div class="info-items">  
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>contactiftex@gmail.com</span>
+                </div>
+
+                <div class="info-items">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>South-East Asia, Bangladesh</span>
+                </div>  
+            </div>
+            
+            <div class="contact-form">
+  <form name="contact" method="POST" data-netlify="true" action="contact.html" novalidate>
+    <h2>Drop your thoughts</h2>
+    <div class="input-box">
+
+      <span class="error-msg"></span>
+      <input type="text" name="name" placeholder="Name">
+      
+      <span class="error-msg"></span>
+      <input type="email" name="email" placeholder="Email Address">
+      
+      <span class="error-msg"></span>
+      <textarea name="message" placeholder="Message"></textarea>
+      
+
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+        </section>
+
+    
+
+        <!-- Resources Section -->
+        <section class="resources" data-aos="fade-down" data-aos-easing="ease-out" data-aos-delay="250">
+            <h2>Made Possible By</h2>
+            <div class="button-container">
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/html5.svg" alt="HTML5">
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/css3.svg" alt="CSS3">
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/javascript.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/chatgpt.svg" alt="ChatGPT">
+                    <span>ChatGPT</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/figma.svg" alt="Figma">
+                    <span>Figma</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/vscode.svg" alt="VS Code">
+                    <span>VS Code</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/icons8.svg" alt="Icons8">
+                    <span>Icons8</span>
+                </div>
+                <div class="tech-button">
+                    <img src="Assets/Skillicons/googlefonts.svg" alt="Google Fonts"> 
+                    <span>Google Fonts</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="imgfooter">
+                    <img src="Assets/Iftexfooter.png" alt="footer">
+                    <p>I think I'm done but there's almost everything left. Thanks for dropping in, hope you enjoyed the visit</p>
+                </div>
+                
+                <div class="credits">
+                    <h2>Credits</h2>
+                    <p>
+                        A project by Iftekhar Uddin<br>
+                        Icons(Skills & resources) by <a href="http://icons8.com/" target="_blank" rel="noopener noreferrer" >Icons8</a><br>
+                        Fonts from <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a><br>
+                        Hosted by <a href="https://netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>
+                    </p>     
+                </div>
+                
+                <div class="sociallinks">
+                    <h2>Socials</h2>
+                    <a href="https://discord.gg/E8Fy3PHvdr" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://github.com/Iftex" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/_iftex" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://steamcommunity.com/id/iftex/" target="_blank"><i class="fab fa-steam"></i></a>
+                    <a href="https://www.xbox.com/en-US/play/user/Iftex" target="_blank"><i class="fab fa-xbox"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <p class="copyright">© 2025 Iftekhar Uddin – All rights are reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
