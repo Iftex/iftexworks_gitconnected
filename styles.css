@@ -520,11 +520,11 @@
             border-radius: 10px;
             color: #E0E0E0;
             font-size: 1rem;
-            resize: vertical;   
+            resize: vertical;
+            max-height: 170px;
             overflow: hidden;  
         }
 
-        
         .input-box input::placeholder, .input-box textarea::placeholder {
             color: #AAAAAA;
             font-size: 0.9rem;
