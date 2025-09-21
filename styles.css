@@ -21,7 +21,7 @@
         }
 
         ::selection {
-            background-color: #5865F2;
+            background-color: #fdfdfd;
             color: #ffffff;
         }
         ::-moz-selection {
