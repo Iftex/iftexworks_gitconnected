@@ -509,11 +509,12 @@
             background: rgba(255,255,255,0.1);
             color: #E0E0E0;
             outline: none;
+            font-size: 1rem;
         }
 
         .input-box textarea {
             width: 100%;
-            height: 80px;         
+            height: 80px;       
             padding: 12px;
             border-radius: 10px;
             color: #E0E0E0;
