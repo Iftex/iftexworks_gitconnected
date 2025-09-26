@@ -148,3 +148,23 @@ form.addEventListener('submit', (e) => {
 
   if (!valid) e.preventDefault(); // stop submission if any field is empty
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "light") {
+    body.setAttribute("data-theme", "light");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    if (body.getAttribute("data-theme") === "light") {
+      body.removeAttribute("data-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      body.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
