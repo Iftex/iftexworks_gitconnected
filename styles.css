@@ -171,6 +171,23 @@
             z-index: 1000;
         }
 
+        .theme-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--heading-color); /* adapts to theme */
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.material-icons {
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
         /* Dropdown Menu */
         .dropdown-menu {
             position: fixed;
@@ -250,20 +267,9 @@
     width: 100%;
 }
 
-.cube-placeholder {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(45deg, #3c4f59, #5865F2);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+
+/*-----------3D CUBE(Extended from SCSS)--------------*/
+
 
         /* About Section */
         .about {

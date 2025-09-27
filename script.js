@@ -149,22 +149,47 @@ form.addEventListener('submit', (e) => {
   if (!valid) e.preventDefault(); // stop submission if any field is empty
 });
 
+
+// Theme toggle with icon
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("theme-toggle");
+  const icon = toggleBtn.querySelector(".material-icons");
   const body = document.body;
 
   // Load saved theme
-  if (localStorage.getItem("theme") === "light") {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
     body.setAttribute("data-theme", "light");
+    icon.textContent = "sunny"; 
+  } else {
+    body.removeAttribute("data-theme");
+    icon.textContent = "dark_mode"; 
   }
 
+  // Toggle theme on click
   toggleBtn.addEventListener("click", () => {
     if (body.getAttribute("data-theme") === "light") {
+      // Switch to dark
       body.removeAttribute("data-theme");
       localStorage.setItem("theme", "dark");
+      icon.textContent = "dark_mode";
     } else {
+      // Switch to light
       body.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
+      icon.textContent = "sunny";
     }
+
+    // Animate icon
+    icon.style.transition = "all 0.3s ease";
+    icon.style.opacity = 0;
+    icon.style.transform = "rotate(360deg)";
+    setTimeout(() => {
+      icon.style.opacity = 1;
+      icon.style.transform = "rotate(0deg)";
+    }, 300);
   });
 });
+
+
+//3d model home
