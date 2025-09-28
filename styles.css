@@ -263,23 +263,9 @@
 /* 3D Placeholder */
 .home-visual {
     display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.cube-placeholder {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(45deg, #3c4f59, #5865F2);
-    border-radius: 10px;
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 
@@ -746,7 +732,7 @@
         flex-direction: row; /* Side by side */
         justify-content: space-between;
         align-items: center;
-        gap: 50px;
+        
         
     }
 
