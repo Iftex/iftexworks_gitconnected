@@ -265,16 +265,18 @@
 /* 3D Placeholder */
 .home-visual {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
 }
+
 .cube-placeholder {
     width: 200px;
     height: 200px;
     background: linear-gradient(45deg, #3c4f59, #5865F2);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
