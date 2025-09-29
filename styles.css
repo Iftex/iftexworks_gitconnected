@@ -31,6 +31,8 @@
             
         }
 
+
+
         html, body {
             margin: 0;
             padding: 0;
@@ -263,11 +265,10 @@
 /* 3D Placeholder */
 .home-visual {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 20px;
 }
-
 .cube-placeholder {
     width: 200px;
     height: 200px;
@@ -277,7 +278,6 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: bold;
     text-align: center;
     padding: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
