@@ -17,6 +17,7 @@
             --border-color: #222222;
             --nav: #ffffff;
             --logo: url(Assets/logo.png);
+            --hover: #2e2e2e;
         }
 
         body[data-theme="light"] {
@@ -28,6 +29,7 @@
             --border-color: #a19d9d;
             --nav: #000000;
             --logo: url(assets/IftexDark.png);
+            --hover: #b1b0b0;
             
         }
 
@@ -175,22 +177,7 @@
             z-index: 1000;
         }
 
-        .theme-btn {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--heading-color); /* adapts to theme */
-  transition: transform 0.5s ease, color 0.3s ease;
-}
-
-.theme-btn:hover {
-  transform: rotate(20deg) scale(1.1);
-}
-
-.material-icons {
-  transition: opacity 0.3s ease, transform 0.5s ease;
-}
+       
 
         /* Dropdown Menu */
         .dropdown-menu {
@@ -237,6 +224,39 @@
         .dropdown-menu .menu:hover {
             color: #5865F2;
         }
+
+.theme-btn {
+  background: transparent;
+  font-size: 1.6rem;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#moon-icon{
+    color: #201e1e;
+}
+
+#sun-icon {
+  color: #e0e0e0;
+}
+
+.theme-btn:hover {
+  background: var(--hover);
+  transform: none;
+}
+
+
+
+
 
         /* Home Section */
         .home {
@@ -399,7 +419,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         }
 
         .workspace-icon:hover {
-            background-color: #2e2e2e;
+            background-color: var(--hover);
         }   
 
 
@@ -453,7 +473,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         }
 
         .skill-filture:hover {
-            background-color: #2e2e2e;
+            background-color: var(--hover);
         }
 
         .skilllogos {
@@ -725,7 +745,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         }
 
         .tech-button:hover {
-            background-color: #2e2e2e;
+            background-color: var(--hover);
         }
 
         .tech-button img {
@@ -944,7 +964,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
             }
             
             .navbar .select:hover {
-                background-color: #2a2a2a;
+                background-color: var(--hover);
             }
             
             #menu-icon {
