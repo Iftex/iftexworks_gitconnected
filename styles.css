@@ -265,10 +265,16 @@
 .role{
     color: var(--links);
     font-size: 1.7rem;
-
-    
+    border-right: 2px solid var(--links);
+    padding-right: 0.1rem;
+    animation: blink 0.7s steps(1) infinite;
 }
 
+@keyframes blink {
+    0%, 50% { border-color: var(--links); }
+    51%, 100% { border-color: transparent; }
+    
+}
 .home-content p {
     color: var(--plain-texts);
     font-size: 1.1rem;
@@ -341,6 +347,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
             max-width: 400px;
             height: auto;
         }
+       
 
         .about-content {
             max-width: 600px;
