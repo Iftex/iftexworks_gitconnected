@@ -286,7 +286,7 @@
 .cube-placeholder {
     width: 200px;
     height: 200px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background: linear-gradient(45deg, #3c4f59, #5865F2);
     border-radius: 10px;
     display: flex;
