@@ -28,3 +28,13 @@ typeRole();
 
 
 
+
+ // Disable right-click on all images
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault(); 
+        }
+    });
+
+
+
