@@ -147,7 +147,7 @@ form.addEventListener('submit', (e) => {
 
 
 
-// Theme toggle with icon and sys.theme span
+// System user home
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("theme-toggle");
     const icon = toggleBtn.querySelector(".material-icons");
@@ -177,6 +177,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateThemeText();
 
+
+//user system memory (random)
+
+function updateMemory() {
+  const total = 8; // total GB
+  const used = (Math.random() * total).toFixed(1);
+
+  const memoryText = document.querySelector(".memory-text");
+  const memoryFill = document.querySelector(".memory-fill");
+
+  memoryText.textContent = `${used}GB/${total}GB`;
+  memoryFill.style.width = `${(used / total) * 100}%`;
+}
+
+// update every 2 seconds
+setInterval(updateMemory, 5000);
+updateMemory();
+
+
+
+//user system device 
+function getDeviceType() {
+  const ua = navigator.userAgent.toLowerCase();
+
+  if (/mobile|iphone|ipod|android.*mobile|windows phone/.test(ua)) {
+    return "mobile";
+  } else if (/tablet|ipad|android(?!.*mobile)/.test(ua)) {
+    return "tablet";
+  } else {
+    return "desktop";
+  }
+}
+
+// Update the sys.device span
+function updateDevice() {
+  const deviceSpan = document.querySelector(".device");
+  deviceSpan.textContent = `"${getDeviceType()}"`; // show in quotes
+}
+
+// Call it once on page load
+updateDevice();
+
+
+//user system time
+function updateTime() {
+  const timeSpan = document.querySelector(".time");
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+
+  timeSpan.textContent = `"${hours}:${minutes}:${seconds}"`;
+}
+
+// Update every second
+setInterval(updateTime, 1000);
+updateTime(); // initial call
 
 
 
