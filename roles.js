@@ -1,3 +1,5 @@
+//homr role changer 
+
 const roles = ["Web Developer", "Programmer", "Graphics Designer", "Scripter", "Video Editor"];
 const roleSpan = document.querySelector(".role");
 let index = 0, charIndex = 0;
@@ -86,9 +88,6 @@ document.addEventListener('keydown', function(e) {
         
     }
 });
-
-
-//custom context menu 
 
 
 

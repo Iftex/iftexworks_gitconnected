@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (savedTheme) {
     body.setAttribute("data-theme", savedTheme);
   } else {
-    body.setAttribute("data-theme", "light"); // default
+    body.setAttribute("data-theme", "dark"); // default
   }
 
   // Set icons correctly on load
