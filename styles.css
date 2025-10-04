@@ -18,6 +18,10 @@
             --nav: #ffffff;
             --logo: url(Assets/logo.png);
             --hover: #2e2e2e;
+            --default-txt: #ffffff;
+            --dropdown-bg: rgba(20, 20, 20, 0.95);
+            --bt-color: #ffffff;
+            --context-bg: #222222;
         }
 
         body[data-theme="light"] {
@@ -30,7 +34,10 @@
             --nav: #000000;
             --logo: url(assets/IftexDark.png);
             --hover: #b1b0b0;
-            
+            --default-txt: #000000;
+            --dropdown-bg: rgba(207, 207, 207, 0.8);
+            --bt-color: #000000;
+            --context-bg: #f0f0f0;
         }
 
 
@@ -62,6 +69,36 @@
             padding: 0;
             margin: 0 auto;
         }
+
+        /*Custom Context Menu*/
+          #custom-menu {
+    position: absolute;
+    background: var(--context-bg);
+    color: var(--default-txt);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none;
+    min-width: 180px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  #custom-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #custom-menu ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  #custom-menu ul li:hover {
+    background: var(--hover);
+  }
 
         
 
@@ -162,7 +199,7 @@
 
         .navbut:hover{
             background: transparent;
-            color: #E0E0E0;
+            color: var(--bt-color);
         }
 
         .navbar ul {
@@ -171,7 +208,7 @@
         }
 
         #menu-icon {
-            color: #E0E0E0;
+            color: var(--default-txt);
             font-size: 28px;
             cursor: pointer;
             z-index: 1000;
@@ -186,7 +223,7 @@
             right: -100%;
             width: 70%;
             height: 100vh;
-            background: rgba(20, 20, 20, 0.95);
+            background: var(--dropdown-bg);
             backdrop-filter: blur(10px);
             z-index: 999;
             padding: 80px 30px 30px;
@@ -213,7 +250,7 @@
 
 
         .dropdown-menu .menu {
-            color: #E0E0E0;
+            color: var(--default-txt);
             text-decoration: none;
             font-size: 1.4rem;
             display: block;
@@ -712,7 +749,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
         /* Resources Section */
         .resources {
-            padding: 60px 20px;
+            padding: 60px 10px;
         }
 
         .resources h2 {
@@ -818,6 +855,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         .fab {
             font-size: 1.8rem;
             transition: transform 0.3s ease-out;
+            margin-bottom: 15px;
         }
 
         .fab:hover {
@@ -830,7 +868,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
             left: 0;
             right: 0;
             text-align: center;
-            color: #ffffff;
+            color: var(--default-txt);
             font-size: 0.9rem;
         }
 

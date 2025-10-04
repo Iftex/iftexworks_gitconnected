@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-//image switcher acc to theme 
+//image switcher according to theme 
 function updateThemeImages(theme) {
     const allThemeImages = document.querySelectorAll('img[data-light][data-dark]');
     allThemeImages.forEach(img => {
@@ -76,4 +76,19 @@ document.querySelector('#theme-toggle').addEventListener('click', () => {
     localStorage.setItem('theme', theme);
     updateThemeImages(theme);
 });
+
+
+
+// Disable Ctrl+U (View Page Source)
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+        e.preventDefault(); // Prevent default browser action
+        
+    }
+});
+
+
+//custom context menu 
+
+
 
