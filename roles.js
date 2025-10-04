@@ -1,4 +1,4 @@
-//homr role changer 
+//home role changer 
 
 const roles = ["Web Developer", "Programmer", "Graphics Designer", "Scripter", "Video Editor"];
 const roleSpan = document.querySelector(".role");
