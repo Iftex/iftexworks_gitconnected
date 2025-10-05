@@ -81,10 +81,24 @@ document.querySelector('#theme-toggle').addEventListener('click', () => {
 
 
 
-// Disable Ctrl+U (View Page Source)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
-        e.preventDefault(); // Prevent default browser action
+// Disable F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function (event) {
+    // Disable F12
+    if (event.key === 'F12') {
+        event.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Inspect)
+    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') {
+        event.preventDefault();
+        return false;
+    }
+
+    // (Optional) Disable Ctrl+U (View Source)
+    if (event.ctrlKey && event.key.toLowerCase() === 'u') {
+        event.preventDefault();
+        return false;
         
     }
 });
