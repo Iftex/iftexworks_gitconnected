@@ -435,7 +435,33 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
             margin-left: 5px;
         }
 
-        
+        .about-content a{
+            color: var(--links);
+            text-decoration: none ;
+        }
+
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+
+        .learn-more{
+            display: inline-flex;
+            align-items: center;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--links);
+            cursor: pointer;
+        }
+
+        .learn-more i {
+            margin: 2px;
+            transition: transform 0.3s ease-out;
+        }
+
+        .learn-more:hover i {
+            transform: translateX(-4px);
+        }
 
         .workspace-icon img{
             width: 26px;
