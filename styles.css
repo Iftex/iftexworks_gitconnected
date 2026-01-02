@@ -304,6 +304,74 @@
     padding: 60px 20px;
 }
 
+.games_img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;  
+}
+
+/* Wrapper to preserve intrinsic image size when needed */
+.img-wrap{
+    
+    display: inline-block;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.img-wrap .games_img{
+    display: block;
+    width: auto;
+    max-width: 100%; /* allow image to scale down on small viewports */
+    height: auto;
+}
+
+/* larger fixed visual size on wide screens */
+.img-wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+.img-overlay{
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* allow clicks through when hidden */
+}
+
+.overlay-btn{
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    transition: opacity 180ms ease, transform 180ms ease;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.img-wrap:hover .overlay-btn{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@media (min-width: 768px) {
+    .img-wrap .games_img{
+        max-width: 400px;
+    }
+    
+}
+@media (min-width: 1200px) {
+    .img-wrap .games_img{
+        max-width: 500px;
+    }
+}
+
+
 .home-content {
     text-align: center; /* Center on mobile */
     max-width: 600px;
@@ -405,7 +473,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
         .about img {
             width:auto;
-            max-width: 400px;
+            max-width: 500px;
             height: auto;
         }
        
@@ -656,13 +724,12 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
         /*Contact Section*/
         .contact{
-            padding: 60px 10px;
+            padding: 60px 20px; /* give a bit more side padding on small screens */
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 30px;
-            
         }
 
         .contact-info h2, .contact-form h2{
@@ -937,6 +1004,8 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
                 text-align: left;
             }
 
+            
+
             .about img {
                 max-width: 50%;
             }
@@ -966,10 +1035,9 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
             .contact{
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-start; /* avoid stretching columns to the far edges */
                 text-align: left;
-                
-                
+                gap: 30px; /* use gap to control spacing between columns */
             }
             .contact-form{
                 flex: 1;
@@ -1055,12 +1123,11 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
                 font-size: 1.1rem;
             }
 
-            .contact {
+            .contact{
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: center; /* keep items together, use gap instead */
                 align-items: flex-start;
-                padding: 80px 40px;
-                gap: 5rem;  
+                gap: 40px;
             }
 
             .contact-info {

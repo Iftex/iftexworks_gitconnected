@@ -143,42 +143,42 @@ form.addEventListener('submit', (e) => {
 // ====================
 // System Info (Random Memory, Device, Time)
 // ====================
-function updateMemory() {
-  const total = 8; // total GB
-  const used = (Math.random() * total).toFixed(1);
+// function updateMemory() {
+//   const total = 8; // total GB
+//   const used = (Math.random() * total).toFixed(1);
 
-  const memoryText = document.querySelector(".memory-text");
-  const memoryFill = document.querySelector(".memory-fill");
+//   const memoryText = document.querySelector(".memory-text");
+//   const memoryFill = document.querySelector(".memory-fill");
 
-  memoryText.textContent = `${used}GB/${total}GB`;
-  memoryFill.style.width = `${(used / total) * 100}%`;
-}
-setInterval(updateMemory, 5000);
-updateMemory();
+//   memoryText.textContent = `${used}GB/${total}GB`;
+//   memoryFill.style.width = `${(used / total) * 100}%`;
+// }
+// setInterval(updateMemory, 5000);
+// updateMemory();
 
-function getDeviceType() {
-  const ua = navigator.userAgent.toLowerCase();
-  if (/mobile|iphone|ipod|android.*mobile|windows phone/.test(ua)) return "mobile";
-  if (/tablet|ipad|android(?!.*mobile)/.test(ua)) return "tablet";
-  return "desktop";
-}
-function updateDevice() {
-  const deviceSpan = document.querySelector(".device");
-  deviceSpan.textContent = `"${getDeviceType()}"`;
-}
-updateDevice();
+// function getDeviceType() {
+//   const ua = navigator.userAgent.toLowerCase();
+//   if (/mobile|iphone|ipod|android.*mobile|windows phone/.test(ua)) return "mobile";
+//   if (/tablet|ipad|android(?!.*mobile)/.test(ua)) return "tablet";
+//   return "desktop";
+// }
+// function updateDevice() {
+//   const deviceSpan = document.querySelector(".device");
+//   deviceSpan.textContent = `"${getDeviceType()}"`;
+// }
+// updateDevice();
 
-function updateTime() {
-  const timeSpan = document.querySelector(".time");
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  const seconds = String(now.getSeconds()).padStart(2, "0");
+// function updateTime() {
+//   const timeSpan = document.querySelector(".time");
+//   const now = new Date();
+//   const hours = String(now.getHours()).padStart(2, "0");
+//   const minutes = String(now.getMinutes()).padStart(2, "0");
+//   const seconds = String(now.getSeconds()).padStart(2, "0");
 
-  timeSpan.textContent = `"${hours}:${minutes}:${seconds}"`;
-}
-setInterval(updateTime, 1000);
-updateTime();
+//   timeSpan.textContent = `"${hours}:${minutes}:${seconds}"`;
+// }
+// setInterval(updateTime, 1000);
+// updateTime();
 
 
 // ====================
