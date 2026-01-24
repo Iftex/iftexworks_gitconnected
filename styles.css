@@ -41,7 +41,6 @@
         }
 
 
-
         html, body {
             margin: 0;
             padding: 0;
@@ -316,7 +315,6 @@
 
 /* Wrapper to preserve intrinsic image size when needed */
 .img-wrap{
-    
     display: inline-block;
     width: auto;
     flex: 0 0 auto;
