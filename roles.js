@@ -52,23 +52,22 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-//image switcher according to theme 
+//Image switcher according to theme
 function updateThemeImages() {
   const theme = document.documentElement.getAttribute("data-theme");
 
-  document.querySelectorAll("img[data-light]").forEach(img => {
+  document.querySelectorAll(".theme-img").forEach(img => {
     img.src = theme === "dark"
       ? img.dataset.dark
       : img.dataset.light;
+
+    img.style.visibility = "visible";
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateThemeImages();
-});
+document.addEventListener("DOMContentLoaded", updateThemeImages);
 
-document.querySelector('#theme-toggle').addEventListener('click', () => {
+document.querySelector("#theme-toggle").addEventListener("click", () => {
   const html = document.documentElement;
   const newTheme =
     html.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -78,7 +77,6 @@ document.querySelector('#theme-toggle').addEventListener('click', () => {
 
   updateThemeImages();
 });
-
 
 
 // Disable F12, Ctrl+Shift+I, Ctrl+U

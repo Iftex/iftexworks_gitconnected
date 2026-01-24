@@ -63,6 +63,10 @@
             color: #ffffff;
         }
 
+        .theme-img{
+            visibility: hidden;
+        }
+
         /* Container */
         .container {
             width: 100%;
