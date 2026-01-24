@@ -54,29 +54,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 //image switcher according to theme 
-function updateThemeImages(theme) {
-    const allThemeImages = document.querySelectorAll('img[data-light][data-dark]');
-    allThemeImages.forEach(img => {
-        img.src = theme === 'dark' ? img.dataset.dark : img.dataset.light;
-        img.setAttribute('draggable', 'false'); // enforce non-draggable
-    });
+function updateThemeImages() {
+  const theme = document.documentElement.getAttribute("data-theme");
+
+  document.querySelectorAll("img[data-light]").forEach(img => {
+    img.src = theme === "dark"
+      ? img.dataset.dark
+      : img.dataset.light;
+  });
 }
 
-// Apply saved theme and images on page load
-window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    updateThemeImages(savedTheme);
+document.addEventListener("DOMContentLoaded", () => {
+  updateThemeImages();
 });
 
-// Theme toggle
 document.querySelector('#theme-toggle').addEventListener('click', () => {
-    const htmlTag = document.documentElement;
-    htmlTag.classList.toggle('dark');
-    const theme = htmlTag.classList.contains('dark') ? 'dark' : 'light';
-    
-    localStorage.setItem('theme', theme);
-    updateThemeImages(theme);
+  const html = document.documentElement;
+  const newTheme =
+    html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  updateThemeImages();
 });
 
 
