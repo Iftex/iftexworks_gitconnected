@@ -57,9 +57,9 @@ function updateThemeImages() {
   const theme = document.documentElement.getAttribute("data-theme");
 
   document.querySelectorAll(".theme-img").forEach(img => {
-    img.src = theme === "light"
-      ? img.dataset.light
-      : img.dataset.dark;
+    img.src = theme === "dark"
+      ? img.dataset.dark
+      : img.dataset.light;
 
     img.style.visibility = "visible";
   });
