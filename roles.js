@@ -53,30 +53,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 //Image switcher according to theme
-function updateThemeImages() {
-  const theme = document.documentElement.getAttribute("data-theme");
 
-  document.querySelectorAll(".theme-img").forEach(img => {
-    img.src = theme === "dark"
-      ? img.dataset.dark
-      : img.dataset.light;
-
-    img.style.visibility = "visible";
-  });
-}
-
-document.addEventListener("DOMContentLoaded", updateThemeImages);
-
-document.querySelector("#theme-toggle").addEventListener("click", () => {
+document.getElementById("theme-toggle").addEventListener("click", () => {
   const html = document.documentElement;
-  const newTheme =
-    html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  const current = html.getAttribute("data-theme");
 
-  html.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+  const next = current === "dark" ? "light" : "dark";
 
-  updateThemeImages();
+  html.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
 });
+
 
 
 // Disable F12, Ctrl+Shift+I, Ctrl+U

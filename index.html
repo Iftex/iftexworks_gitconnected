@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,10 +11,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>iftexworks(Early Accessed)</title>
     <script>
-  (function () {
-    const savedTheme = localStorage.getItem("theme") || "light";
+(function () {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
-  })();
+  }
+})();
 </script>
 
 </head>
@@ -45,7 +48,7 @@
         <nav class="navbar">
             <div class="logo-container">
                 <a href="#" class="itlogo">
-                    <img id="logo" class="theme-img" data-dark="Assets/Iftexmain.png" data-light="Assets/IftexDark.png" alt="Logo" draggable="false">
+                    <div class="nav-img" id="logo" alt="Logo" draggable="false"></div>
                 </a>
                 <h2>iftexworks</h2>
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"> 
@@ -106,10 +109,7 @@
 
         <!-- About Section -->
         <section class="about" id="about" data-aos="fade-left" data-aos-easing="ease-out" data-aos-delay="250">
-            <img class="theme-img"
-            data-dark="Assets/Iftex about.png" 
-            data-light="Assets/Iftexabout_dark.png" 
-            alt="About Logo" draggable="false">
+            <div class="about-img" alt="About Logo" draggable="false"></div>
             <div class="about-content">
                 
                 <h2>Biography</h2>
@@ -122,7 +122,7 @@
                     </span>
                 <h2>Workspaces</h2>      
                 <div class="workspace-icon">
-                    <img src="Assets/Skillicons/vscode.svg" draggable="false" alt="vscode" >
+                    <img src="Assets/Skillicons/vscode.svg" draggable="false" alt="vscode">
                     <span>Visual Studio Code</span>
                 </div>
                 <div class="workspace-icon">
@@ -373,7 +373,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="imgfooter">
-                    <img class="theme-img" data-dark="Assets/Iftexfooter.png" data-light="Assets/Iftexfooter_dark.png" alt="footer-icon" draggable="false">
+                    <img class="footer-img" alt="footer-icon" draggable="false">
                     <p>Copying or reproducing of any content from this webstie is strictly prohibited.
                         <a style="color: var(--links)" href="licenses.html">Copyright & Licenses</a>
                     </p>

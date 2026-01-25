@@ -8,6 +8,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        
         :root{
             --headings: #E0E0E0;
             --plain-texts: #AAAAAA;
@@ -22,13 +23,35 @@
             --dropdown-bg: rgba(20, 20, 20, 0.95);
             --bt-color: #ffffff;
             --context-bg: #222222;
+            --nav-icon: url(Assets/Iftexmain.png);
+            --about-img: url(Assets/Iftexabout.png);
+            --footer-img: url(Assets/Iftexfooter.png);
+        }
+
+        body[data-theme="dark"] {
+            --headings: #E0E0E0;
+            --plain-texts: #AAAAAA;
+            --links: #5865F2;
+            --bg: url(assets/Backgroundrepeat.png) center center / cover repeat;
+            --footer-bg: url(Assets/footer.png) center / cover no-repeat;
+            --border-color: #222222;
+            --nav: #ffffff;
+            --logo: url(Assets/logo.png);
+            --hover: #2e2e2e;
+            --default-txt: #ffffff;
+            --dropdown-bg: rgba(20, 20, 20, 0.95);
+            --bt-color: #ffffff;
+            --context-bg: #222222;
+            --nav-icon: url(Assets/Iftexmain.png);
+            --about-img: url(Assets/Iftexabout.png);
+            --footer-img: url(Assets/Iftexfooter.png);
         }
 
         body[data-theme="light"] {
             --headings: #000000;
             --plain-texts: #201e1e;
             --links: #5865F2;
-            --bg: url(Assets/bglight.png) center center / cover repeat;
+            --bg: #ececec;
             --footer-bg: url(Assets/footerlight.png) center / cover no-repeat;
             --border-color: #a19d9d;
             --nav: #000000;
@@ -38,6 +61,9 @@
             --dropdown-bg: rgba(207, 207, 207, 0.8);
             --bt-color: #000000;
             --context-bg: #f0f0f0;
+            --nav-icon: url(Assets/IftexDark.png);
+            --about-img: url(Assets/Iftexabout_dark.png);
+            --footer-img: url(Assets/Iftexfooter_dark.png);
         }
 
 
@@ -62,9 +88,6 @@
             color: #ffffff;
         }
 
-        .theme-img{
-            visibility: hidden;
-        }
 
         /* Container */
         .container {
@@ -174,7 +197,8 @@
             gap: 10px;
         }
 
-        .navbar img {
+        .nav-img {
+            content: var(--nav-icon);
             width: 50px;
             height: auto;
             object-fit: contain;
@@ -510,7 +534,8 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
             
         }
 
-        .about img {
+        .about-img {
+            content: var(--about-img);
             width:auto;
             max-width: 500px;
             height: auto;
@@ -941,7 +966,8 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
             text-align: center;
         }
 
-        .footer img {
+        .footer-img {
+            content: var(--footer-img);
             width: 100%;
             max-width: 300px;
             margin-bottom: 20px;
@@ -1045,7 +1071,7 @@ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
             
 
-            .about img {
+            .about-img {
                 max-width: 50%;
             }
 
