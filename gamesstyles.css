@@ -21,6 +21,13 @@
 }
 
 
+body {
+  margin: 0;
+  background:  var(--bg);
+  color: var(--headings);
+}
+
+
         /* Maintenance */
         .maintenance-bar {
     background: linear-gradient(to right, #f0f0f0, #e0e0e0);
@@ -58,15 +65,115 @@
     font-size: 17px;
 }
 
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: relative;
+        }
+
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-img {
+            content: var(--nav-icon);
+            width: 50px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .navbar h2 {
+            color: var(--headings);
+            font-size: 1.4rem;
+        }
+        
+
+        .navbut{
+            background: #E0E0E0;
+            Padding: 8px 15px;
+            Border: 2px solid #E0E0E0;
+            border-radius: 7px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: ease-out 250ms;
+        }
+
+        .navbut li{
+            color: transparent;
+        }
+
+        .navbut:hover{
+            background: transparent;
+            color: var(--bt-color);
+        }
+
+        .navbar ul {
+            display: none;
+            align-items: center;
+        }
+
+        #menu-icon {
+            color: var(--default-txt);
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+       
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background: var(--dropdown-bg);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            padding: 80px 30px 30px;
+            transition: right 0.3s ease-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .dropdown-menu.show {
+            right: 0;
+        }
+
+        .dropdown-menu ul {
+            list-style: none;
+        }
+
+        ul img{
+            width: 15%;
+        }
+
+        .dropdown-menu ul li {
+            margin-bottom: 20px;
+        }
+
+
+        .dropdown-menu .menu {
+            color: var(--default-txt);
+            text-decoration: none;
+            font-size: 1.4rem;
+            display: block;
+            padding: 10px 0;
+            transition: color 0.2s ease;
+        }
+
+        .dropdown-menu .menu:hover {
+            color: #5865F2;
+        }
 
 
 
-
-body {
-  margin: 0;
-  background:  var(--bg);
-  color: var(--headings);
-}
 
 
 
