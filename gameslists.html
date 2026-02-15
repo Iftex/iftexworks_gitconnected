@@ -33,38 +33,25 @@
                     <div class="nav-img" id="logo" alt="Logo" draggable="false"></div>
                 </a>
                 <h2>iftexworks</h2>
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"> 
+            </div> 
+            
+            <div style="display: flex; align-items: center; gap: 5px;">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"> 
   <i id="moon-icon" class="fa-solid fa-moon"></i>
   <i id="sun-icon" class="fa-solid fa-sun" style="display: none;"></i>
 </button>
 
-            </div> 
-            
-            <ul>
-                <li><span class="select" onclick="scrollToSection('home')">Home</span></li>
-                <li><span class="select" onclick="scrollToSection('about')">About</span></li>
-                <li><span class="select" onclick="scrollToSection('skills')">Skills</span></li>
-                <li><span class="select" onclick="scrollToSection('faq')">FAQ</span></li>
-                <li><button class="navbut" onclick="scrollToSection('contact')">Contact</button></li>
-            </ul>
-            
-            <div id="menu-icon">
-                <i class="material-icons">menu</i>
-            </div>
+<div class="back-button">
+  <a style="display: inline-flex;" href="index.html">
+<span class="material-symbols-outlined">arrow_back</span>
+Back</a>
+</div>
+
+</div>
+           
         </nav>
     </header>
 
-    <!-- Dropdown Menu -->
-    <div class="dropdown-menu">
-        <ul>
-            <li><span class="menu" onclick="scrollToSection('home')">Home</span></li>
-            <li><span class="menu" onclick="scrollToSection('about')">About</span></li>
-            <li><span class="menu" onclick="scrollToSection('skills')">Skills</span></li>
-            <li><span class="menu" onclick="scrollToSection('faq')">FAQ</span></li>
-            <li><button class="navbut" onclick="scrollToSection('contact')">Contact</button></li>
-            
-        </ul>
-    </div>
 
 
   <main class="grid-library">
@@ -143,7 +130,7 @@
       </div>
 <!--card 6-->
       <div class="game-card">
-        <img src="gmsimg/Ironsight.jpg" alt="Ironsight">
+        <img src="gmsimg/Ironsight.png" alt="Ironsight">
         <div class="game-overlay">
             <div class="inside-items">
               <span class="material-symbols-outlined icon">star</span>
@@ -935,9 +922,11 @@
                 </div>
             </div>
         </div>
+
+  
         
         <p class="copyright">© 2025 Iftekhar Uddin – All rights are reserved.</p>
     </footer>
-
+<script src="gameslists.js"></script>
 </body>
 </html>

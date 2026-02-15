@@ -16,8 +16,29 @@
       --hover: #2e2e2e;
       --default-txt: #ffffff;
       --dropdown-bg: rgba(20, 20, 20, 0.95);
-      --bt-color: #ffffff;
+      --bt-color: #fff;
       --context-bg: #222222;
+      --nav-icon: url(Assets/Iftexmain.png);
+      --footer-img: url(Assets/Iftexfooter.png);
+}
+
+/* Light theme overrides (apply whether attribute is on html or body) */
+html[data-theme="light"], body[data-theme="light"] {
+  --headings: #000000;
+  --plain-texts: #201e1e;
+  --links: #5865F2;
+  --bg: #ececec;
+  --footer-bg: url(Assets/footerlight.png) center / cover no-repeat;
+  --border-color: #e0e0e0;
+  --nav: #000000;
+  --logo: url(assets/IftexDark.png);
+  --hover: #b1b0b0;
+  --default-txt: #000000;
+  --dropdown-bg: rgba(207, 207, 207, 0.8);
+  --bt-color: #000000;
+  --context-bg: #f0f0f0;
+  --nav-icon: url(Assets/IftexDark.png);
+  --footer-img: url(Assets/Iftexfooter_dark.png);
 }
 
 
@@ -81,10 +102,13 @@ body {
         }
 
         .nav-img {
-            content: var(--nav-icon);
-            width: 50px;
-            height: auto;
-            object-fit: contain;
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          background: var(--nav-icon) center/contain no-repeat;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
         }
 
         .navbar h2 {
@@ -92,89 +116,72 @@ body {
             font-size: 1.4rem;
         }
         
+/*Theme-switch button*/
+.theme-btn {
+  background: transparent;
+  font-size: 1.6rem;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
 
-        .navbut{
-            background: #E0E0E0;
-            Padding: 8px 15px;
-            Border: 2px solid #E0E0E0;
-            border-radius: 7px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: ease-out 250ms;
-        }
+#moon-icon{
+    color: #201e1e;
+}
 
-        .navbut li{
-            color: transparent;
-        }
+#sun-icon {
+  color: #e0e0e0;
+}
 
-        .navbut:hover{
-            background: transparent;
-            color: var(--bt-color);
-        }
+.theme-btn:hover {
+  background: var(--hover);
+  transform: none;
+}
 
-        .navbar ul {
-            display: none;
-            align-items: center;
-        }
+/*Back-button*/
 
-        #menu-icon {
-            color: var(--default-txt);
-            font-size: 28px;
-            cursor: pointer;
-            z-index: 1000;
-        }
+.back-button{
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  color: var(--headings);
+  border: 2px solid #e0e0e0;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 250ms ease-out;
+}
 
-       
+.back-button span {
+    color: #000;
+}
 
-        /* Dropdown Menu */
-        .dropdown-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 70%;
-            height: 100vh;
-            background: var(--dropdown-bg);
-            backdrop-filter: blur(10px);
-            z-index: 999;
-            padding: 80px 30px 30px;
-            transition: right 0.3s ease-out;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-        }
+.back-button a {
+    color: #000;
+    text-decoration: none;
+}
 
+.back-button:hover {
+  background: transparent;
+}
 
-        .dropdown-menu.show {
-            right: 0;
-        }
+.back-button:hover a {
+    color: var(--bt-color)
+}
 
-        .dropdown-menu ul {
-            list-style: none;
-        }
-
-        ul img{
-            width: 15%;
-        }
-
-        .dropdown-menu ul li {
-            margin-bottom: 20px;
-        }
-
-
-        .dropdown-menu .menu {
-            color: var(--default-txt);
-            text-decoration: none;
-            font-size: 1.4rem;
-            display: block;
-            padding: 10px 0;
-            transition: color 0.2s ease;
-        }
-
-        .dropdown-menu .menu:hover {
-            color: #5865F2;
-        }
-
-
-
-
+.back-button:hover span {
+    color: var(--bt-color);
+}
 
 
 /* Page container */
@@ -241,6 +248,13 @@ body {
   margin: auto;
 }
 
+/* Light-theme subtle elevation for game cards */
+html[data-theme="light"] .game-card,
+body[data-theme="light"] .game-card {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.205), 0 2px 6px rgba(0, 0, 0, 0.192);
+  background: #ffffff; /* slightly brighter background in light theme */
+}
+
 /* Image */
 .game-card img {
   width: 100%;
@@ -272,6 +286,7 @@ body {
 
 /* Text styles */
 .inside-items{
+  color: #fff;
   display: flex;
   align-items: center;
   opacity: 0.8;
@@ -316,6 +331,7 @@ body {
         }
 
         .footer img {
+            content: var(--footer-img);
             width: 100%;
             max-width: 300px;
             margin-bottom: 20px;
@@ -393,4 +409,10 @@ body {
             .imgfooter {
                 text-align: center;
             }
+}
+
+@media(max-width: 390px){
+    .back-button{
+        display: none;
+    }
 }
