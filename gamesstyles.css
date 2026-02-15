@@ -198,25 +198,6 @@ body {
 }
 
 /* ===== GRID ===== */
-/* Lazy-loading blur states for game banners */
-.game-card img.lazy {
-  filter: blur(12px);
-  transform: scale(1.02);
-  transition: filter 400ms ease, transform 400ms ease, opacity 400ms ease;
-  opacity: 0.98;
-  will-change: filter, transform, opacity;
-}
-
-.game-card img.loaded {
-  filter: none;
-  transform: none;
-  opacity: 1;
-}
-
-.game-card img.error {
-  filter: blur(8px) grayscale(80%);
-  opacity: 0.75;
-}
 
 /* Mobile first */
 .fps-shooters, .action-adventure, .horror-survival-zombie, .indie-casual,.racing-driving, .others{

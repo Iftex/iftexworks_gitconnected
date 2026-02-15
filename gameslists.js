@@ -70,39 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Lazy-load + blur-to-clear for game banner images
-document.addEventListener('DOMContentLoaded', () => {
-  const imgs = document.querySelectorAll('.game-card img');
-  imgs.forEach(img => {
-    // Prefer native lazy loading
-    try { img.loading = 'lazy'; } catch (e) {}
 
-    // Start in blurred "loading" state
-    img.classList.add('lazy');
-
-    const markLoaded = () => {
-      img.classList.remove('lazy', 'error');
-      img.classList.add('loaded');
-      cleanup();
-    };
-    const markError = () => {
-      img.classList.remove('lazy', 'loaded');
-      img.classList.add('error');
-      cleanup();
-    };
-    const cleanup = () => {
-      img.removeEventListener('load', markLoaded);
-      img.removeEventListener('error', markError);
-    };
-
-    // If already finished loading (cache), set correct state immediately
-    if (img.complete) {
-      if (img.naturalWidth && img.naturalHeight) markLoaded();
-      else markError();
-    } else {
-      img.addEventListener('load', markLoaded);
-      img.addEventListener('error', markError);
-    }
-  });
-});
 
