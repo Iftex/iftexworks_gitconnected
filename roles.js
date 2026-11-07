@@ -1,6 +1,6 @@
 //home role changer 
 
-const roles = ["Web Developer", "Programmer", "Graphics Designer", "Scripter", "Video Editor"];
+const roles = ["Web Developer", "GFX Designer", "AI & ML practitioner"];
 const roleSpan = document.querySelector(".role");
 let index = 0, charIndex = 0;
 
