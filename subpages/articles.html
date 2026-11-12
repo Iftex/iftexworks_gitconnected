@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111116">
+  <meta name="description" content="Notes and sample articles on design, web development, and creative process by Iftekhar Uddin.">
+  <title>Articles · iftexworks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Freckle+Face&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,1,0" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Favicon.png" alt="favicon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="articles.css">
+  <script>
+    (() => {
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body>
+ <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="../index.html" class="itlogo" aria-label="iftexworks home">
+                    <div class="nav-img" id="logo" alt="Logo" draggable="false"></div>
+                </a>
+                <h2>iftexworks</h2>
+            </div> 
+            
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme" type="button">
+                <i id="moon-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
+                <i id="sun-icon" class="fa-solid fa-sun" style="display: none;" aria-hidden="true"></i>
+              </button>
+              <div class="back-button">
+                <a style="display: inline-flex;" href="../index.html"><span class="material-symbols-outlined">arrow_back</span>Back</a>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> THE NOTEBOOK <span class="eyebrow-line"></span></div>
+      <h1 id="page-title">Ideas in <em>progress.</em></h1>
+      <p class="intro-copy">A small collection of thoughts on making things for the web, learning by building, and finding a little more intention in the process.</p>
+      <div class="intro-meta"><span><i class="fa-regular fa-rectangle-list" aria-hidden="true"></i> <span id="result-count">4 notes</span></span><span class="meta-dot"></span><span>Short reads, open in place</span></div>
+      <div class="intro-scribble" aria-hidden="true">✳</div>
+    </section>
+
+    <section class="library" aria-label="Article library">
+      <div class="library-heading">
+        <div><span class="section-kicker">FIELD NOTES / 001—004</span><h2>Browse the notebook</h2></div>
+        <label class="search-box"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span class="sr-only">Search articles</span><input id="article-search" type="search" placeholder="Find a note…" autocomplete="off"></label>
+      </div>
+      <div class="filters" role="group" aria-label="Filter articles by topic">
+        <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">Everything <span>04</span></button>
+        <button class="filter-chip" type="button" data-filter="design" aria-pressed="false">Design <span>02</span></button>
+        <button class="filter-chip" type="button" data-filter="development" aria-pressed="false">Development <span>01</span></button>
+        <button class="filter-chip" type="button" data-filter="process" aria-pressed="false">Process <span>01</span></button>
+      </div>
+
+      <div class="article-list" id="article-list">
+        <article class="article-card" data-category="design" data-search="small details make a website feel considered design interface details spacing motion">
+          <details>
+            <summary>
+              <span class="article-index">01</span>
+              <span class="article-heading"><span class="article-label">DESIGN <i>·</i> SAMPLE NOTE</span><span class="article-title">The small details that make a website feel considered</span><span class="article-excerpt">A thoughtful experience is often built from the quiet choices people barely notice.</span></span>
+              <span class="article-side"><span class="read-time">4 min read</span><span class="expand-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span></span>
+            </summary>
+            <div class="article-body"><p class="article-lede">Polish rarely comes from one dramatic effect. More often, it grows out of a dozen small decisions that work together.</p><p>When I build a page, I try to pay attention to the moments between the big moments: how a button responds, whether a heading has room to breathe, and what happens when someone reaches the end of a section. Those details can make a site feel welcoming and easy to understand.</p><h3>Start with the feeling</h3><p>Before adding another animation or decorative shape, I ask what the page should feel like. Calm? Playful? Focused? A clear answer makes it easier to choose color, spacing, and motion that belong together.</p><p>Then I check the basics at different screen sizes. Comfortable line lengths, readable contrast, and predictable controls do more for a design than decoration ever can. The best details support the content instead of competing with it.</p><p class="article-signoff">A good interface feels intentional even when the details stay quiet.</p></div>
+          </details>
+        </article>
+
+        <article class="article-card" data-category="development" data-search="learning web development by building small projects coding practice iteration">
+          <details>
+            <summary>
+              <span class="article-index">02</span>
+              <span class="article-heading"><span class="article-label">DEVELOPMENT <i>·</i> SAMPLE NOTE</span><span class="article-title">Learning web development by building small things</span><span class="article-excerpt">Small projects turn abstract tutorials into decisions you can see, test, and improve.</span></span>
+              <span class="article-side"><span class="read-time">5 min read</span><span class="expand-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span></span>
+            </summary>
+            <div class="article-body"><p class="article-lede">A tiny finished project can teach more than a long list of ideas you have not had a chance to use.</p><p>When I was learning, it helped to make things with a clear finish line: a landing page, a small interactive scene, or a component that solved one problem. Each project gave me a reason to look something up and a place to try it right away.</p><h3>Keep the scope kind</h3><p>Small does not mean meaningless. Pick one thing you want to understand, then let the rest stay simple. If the goal is to learn layout, a plain color palette is enough. If the goal is interaction, start with one clear action and make it work well.</p><p>Finishing also creates useful feedback. You can see what feels awkward, improve it, and carry that lesson into the next project. Over time, those small loops add up to a body of work—and a much stronger sense of how you like to build.</p><p class="article-signoff">Make it small enough to finish, then make the next one a little better.</p></div>
+          </details>
+        </article>
+
+        <article class="article-card" data-category="design" data-search="dark light themes beyond color accessible design contrast interface theme">
+          <details>
+            <summary>
+              <span class="article-index">03</span>
+              <span class="article-heading"><span class="article-label">DESIGN <i>·</i> SAMPLE NOTE</span><span class="article-title">A theme is more than swapping the background</span><span class="article-excerpt">Good light and dark modes preserve the character of a page while changing its atmosphere.</span></span>
+              <span class="article-side"><span class="read-time">3 min read</span><span class="expand-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span></span>
+            </summary>
+            <div class="article-body"><p class="article-lede">A theme switch should change how a site feels without making it feel like a different site.</p><p>It is tempting to treat dark mode as a background swap. But text, borders, shadows, images, and interactive states all contribute to whether a page remains comfortable to use. A bright accent that looks balanced on charcoal may feel loud on a pale surface.</p><h3>Keep the same visual language</h3><p>I like to keep a few recognizable elements consistent—such as the accent color, type choices, and spacing—then tune the surfaces and contrast for each theme. That way the page keeps its identity in both settings.</p><p>It also helps to remember the chosen theme across pages. A small bit of consistency can make a multi-page site feel like one complete place, rather than separate demos stitched together.</p><p class="article-signoff">A good theme gives the same design a different kind of light.</p></div>
+          </details>
+        </article>
+
+        <article class="article-card" data-category="process" data-search="creative process iteration first version feedback refine portfolio project">
+          <details>
+            <summary>
+              <span class="article-index">04</span>
+              <span class="article-heading"><span class="article-label">PROCESS <i>·</i> SAMPLE NOTE</span><span class="article-title">Make the first version, then give it room to grow</span><span class="article-excerpt">A project gets clearer when there is something real to react to.</span></span>
+              <span class="article-side"><span class="read-time">4 min read</span><span class="expand-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span></span>
+            </summary>
+            <div class="article-body"><p class="article-lede">The first version is not a verdict on your idea. It is a way to make the idea easier to see.</p><p>Planning matters, but I can spend too long imagining every possible direction before I have a page on screen. Starting with a rough version gives me something concrete to evaluate. I can notice what is missing, what is unnecessary, and what the project is really asking to become.</p><h3>Build a useful feedback loop</h3><p>I try to work in short passes: put down the structure, make the main interaction clear, and then refine the presentation. Each pass should answer a question. Does the page make sense? Can someone use it on a phone? Is the most important action obvious?</p><p>Not every idea survives that process, and that is useful too. Removing a feature can be progress when it makes the central experience stronger. The goal is not to keep adding; it is to keep making the work more understandable.</p><p class="article-signoff">A rough first draft is a starting point you can actually improve.</p></div>
+          </details>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No notes match that search. Try another phrase or topic.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="../index.html" aria-label="iftexworks home"><img class="footer-img" src="../Assets/Iftexfooter.png" alt="iftexworks"></a>
+        <p>Copying or reproducing of any content from this website is strictly prohibited.<br><a href="../licenses.html">Copyright &amp; Licenses</a></p>
+      </div>
+      <div class="credits">
+        <h2>Credits &amp; Attributes</h2>
+        <p>A project by Iftekhar Uddin<br>Icons (skills, about &amp; resources) by <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">Icons8</a><br>Fonts from <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a><br>Colors and textures edited with <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a><br>Hosted by <a href="https://netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a></p>
+      </div>
+      <div class="sociallinks">
+        <h2>Socials</h2>
+        <a href="https://gitlab.com/iftex" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-square-gitlab" aria-hidden="true"></i></a>
+        <a href="https://github.com/Iftex" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-square-github" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/_iftex/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-square-instagram" aria-hidden="true"></i></a>
+        <a href="https://x.com/_Agereo" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-square-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.hackerrank.com/profile/iftex" target="_blank" rel="noopener noreferrer" aria-label="HackerRank"><i class="fab fa-hackerrank" aria-hidden="true"></i></a>
+        <a href="https://www.reddit.com/user/agereo/" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><i class="fab fa-square-reddit" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Iftekhar Uddin – All rights are reserved.</p>
+  </footer>
+  <script src="articles.js"></script>
+</body>
+</html>
